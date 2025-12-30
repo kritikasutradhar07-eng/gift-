@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Gift 🎁</title>
+
+<style>
+body {
+  margin: 0;
+  height: 100vh;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #ffe4ec;
+}
+
+#gift {
+  font-size: 90px;
+  cursor: pointer;
+  animation: bounce 1.3s infinite;
+}
+
+@keyframes bounce {
+  0%,100% { transform: translateY(0); }
+  50% { transform: translateY(-15px); }
+}
+
+#popup {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0,0,0,0.85);
+  justify-content: center;
+  align-items: center;
+}
+
+#popup img {
+  max-width: 90%;
+  max-height: 90%;
+  border-radius: 12px;
+}
+</style>
+</head>
+
+<body>
+
+<div id="gift" onclick="openGift()">🎁</div>
+
+<div id="popup" onclick="closeGift()">
+  <img src="meme.jpg">
+</div>
+
+<script>
+function openGift() {
+  document.getElementById("popup").style.display = "flex";
+}
+function closeGift() {
+  document.getElementById("popup").style.display = "none";
+}
+</script>
+
+</body>
+</html>
